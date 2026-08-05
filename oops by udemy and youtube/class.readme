@@ -221,3 +221,174 @@ Interview answer
 You can say:
 
 “OOP achieves modularity by dividing code into classes, data security by hiding internal data and controlling access through methods, and reusability by allowing the same class to create multiple objects or be extended through inheritance.”
+
+
+
+-------------------------------------------------------------------
+
+The main OOP concepts are:
+
+Class
+
+Object
+
+Encapsulation
+
+Abstraction
+
+Inheritance
+
+Polymorphism
+
+1) Class
+A class is a blueprint or template for creating objects. It defines what data and behavior an object will have.
+
+python
+class Car:
+    pass
+2) Object
+An object is an instance of a class, meaning a real thing created from that blueprint.
+
+python
+my_car = Car()
+3) Encapsulation
+Encapsulation means bundling data and methods together in one unit and controlling access to the data. This helps protect the internal state of an object.
+
+python
+class BankAccount:
+    def __init__(self, balance):
+        self.__balance = balance
+
+    def get_balance(self):
+        return self.__balance
+4) Abstraction
+Abstraction means showing only the important details and hiding the implementation. The user sees what an object does, not how it does it.
+
+Example: when you use an ATM, you know how to withdraw cash, but you do not need to know the internal working.
+
+5) Inheritance
+Inheritance means one class can reuse the properties and methods of another class. It helps reduce duplicate code.
+
+python
+class Animal:
+    def speak(self):
+        print("Sound")
+
+class Dog(Animal):
+    pass
+6) Polymorphism
+Polymorphism means one method name can behave differently for different objects. In simple words, the same action can have different forms.
+
+python
+class Dog:
+    def sound(self):
+        print("Bark")
+
+class Cat:
+    def sound(self):
+        print("Meow")
+Easy interview answer
+You can say:
+
+“OOP has six main concepts: class, object, encapsulation, abstraction, inheritance, and polymorphism. Class is the blueprint, object is the instance, encapsulation protects data, abstraction hides complexity, inheritance reuses code, and polymorphism allows one interface to work in different ways.”
+
+class name should be give in pascal naming convention
+example : BankAccount
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+__init__ is the method Python uses to initialize an object when it is created. It sets up the object’s initial data, like name, age, or balance.
+
+Simple meaning
+When you create an object from a class, Python calls __init__ automatically.
+
+python
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+s1 = Student("Asha", 21)
+Here:
+
+Student is the class.
+
+s1 is the object.
+
+__init__ stores "Asha" and 21 inside that object.
+
+Why it is useful
+Without __init__, you would have to set values manually after creating the object. __init__ helps create the object in a ready-to-use state.
+
+Easy example
+python
+class Car:
+    def __init__(self, brand, color):
+        self.brand = brand
+        self.color = color
+
+car1 = Car("Toyota", "Red")
+print(car1.brand)
+print(car1.color)
+This means:
+
+brand becomes "Toyota"
+
+color becomes "Red"
+
+Important points
+self refers to the current object.
+
+__init__ runs automatically.
+
+It does not create the object; it only initializes it.
+
+It usually does not return anything.
+
+Interview answer
+You can say:
+
+“__init__ is a special method in Python that initializes an object’s attributes when the object is created. It is called automatically and helps set the object’s initial state.”
+
+If you want, I can also explain self in the same simple way.
+
+can you given an example without __init__
+Yes — you can create a class without __init__, but then the object starts out empty and you set attributes later.
+
+Example without __init__
+python
+class Student:
+    pass
+
+s1 = Student()
+s1.name = "Asha"
+s1.age = 21
+
+print(s1.name)
+print(s1.age)
+What is happening
+Student() creates an object.
+
+pass means the class has no methods or logic yet.
+
+name and age are added after the object is created.
+
+Compare with __init__
+With __init__, you set values while creating the object:
+
+python
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+s1 = Student("Asha", 21)
+Difference
+Without __init__: attributes are added manually after object creation.
+
+With __init__: attributes are initialized automatically when the object is created.
+
+Interview answer
+You can say:
+
+“Yes, a class can be created without __init__. In that case, the object is created first and its attributes are assigned later manually. __init__ is useful because it initializes the object at the time of creation.”
